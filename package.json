@@ -1,0 +1,38 @@
+{
+  "name": "app_nhom6",
+  "version": "1.0.0",
+  "description": "Course Online",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect src/app.js",
+    "beautiful": "prettier --single-quote --trailing-comma all --tab-width 4 --write \"src/**/*.{js,json,scss}\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "models": "sequelize-auto -o 'src/models' -d onlinecourse -h localhost -u root -p 3306 -x 123456 -e mysql"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShinNgao12/19_1-NM_CNPM.git"
+  },
+  "author": "PhuNguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShinNgao12/19_1-NM_CNPM/issues"
+  },
+  "homepage": "https://github.com/ShinNgao12/19_1-NM_CNPM#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "express-session": "^1.17.2",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.4",
+    "mongoose": "^6.5.2",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3",
+    "prettier": "^2.5.1",
+    "sequelize": "^7.0.0-alpha.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

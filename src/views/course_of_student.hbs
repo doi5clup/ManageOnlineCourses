@@ -1,0 +1,199 @@
+
+<!--====== HEADER PART START ======-->
+    
+<header id="header-part">
+        <div class="navigation navigation-2 navigation-3">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-lg-11 col-md-10 col-sm-9 col-9">
+                    <nav class="navbar navbar-expand-lg">
+                            
+                        <a class="navbar-brand" style="margin-right: 60px;" href="/home">
+                            <h1 style="font-size: 30px; color: rgb(0, 225, 255)"><i class="fa fa-graduation-cap active"> COURSIN </i></h1>         
+                        </a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                           
+                            <div class="ml-auto">
+                                {{#if session.isLogin}}
+                                    <a style="color: white; font-size: 17px; font-weight: 700" href="/student">Khóa học của tôi</a>
+                                
+                                    <div class="navbar-brand dropdown ml-40">
+                                        <a class="dropdown-toggle" style="color: white; font-size: 17px; font-weight: 700" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            {{session.name}}
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><a class="dropdown-item" href="#">Cập nhật thông tin</a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><a class="dropdown-item" href="/">Đăng xuất</a></li>
+                                        </ul>
+                                    </div>
+                                {{else}}
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item"><a href="/register" style="font-size: 12px;">Đăng kí</a></li>
+                                        <li class="nav-item"><a href="/login" style="font-size: 12px;">Đăng nhập</a></li>
+                                    </ul>  
+                                {{/if}}
+                            </div>
+                            
+                        </div>
+                        
+                    </nav> <!-- nav -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </div>  
+        
+    </header>
+    
+    <!--====== HEADER PART ENDS ======-->
+   
+    <!--====== SEARCH BOX PART START ======-->
+    
+    <div class="search-box">
+        <div class="serach-form">
+            <div class="closebtn">
+                <span></span>
+                <span></span>
+            </div>
+            <form action="#">
+                <input type="text" placeholder="Search by keyword">
+                <button><i class="fa fa-search"></i></button>
+            </form>
+        </div> <!-- serach form -->
+    </div>
+    
+    <!--====== SEARCH BOX PART ENDS ======-->
+   
+    <!--====== PAGE BANNER PART START ======-->
+    
+    <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style="background-image: url(/images/page-banner-2.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 mt-60">
+                    <div class="page-banner-cont">
+                        <h2>{{course.TenKH}}</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/home">Home</a></li>
+                                <li class="breadcrumb-item"><a href="/student">Khóa học của tôi</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{{course.TenKH}}</li>
+                            </ol>
+                        </nav>
+                    </div>  <!-- page banner cont -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    
+    <!--====== PAGE BANNER PART ENDS ======-->
+    
+    <!--====== COURSES SINGEl PART START ======-->
+    
+    <section id="corses-singel" class="pt-90 pb-120 gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="corses-singel-left mt-30">
+                        <div class="title">
+                            <h3>{{course.TenKH}} cho người mới bắt đầu.</h3>
+                        </div> <!-- title -->
+                        <div class="course-terms">
+                            <ul>
+                                <li>
+                                    <div class="teacher-name">
+                                        <div class="thum">
+                                            <img style="width:30px; height:35px" src="{{course.LinkAvatar}}" alt="Teacher">
+                                        </div>
+                                        <div class="name">
+                                            <span>GiaoVien</span>
+                                            <h6>{{course.HoTen}}</h6>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="course-category">
+                                        <span>Lĩnh vực</span>
+                                        <h6>{{course.LinhVuc}} </h6>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="review">
+                                        <span>Đánh giá</span>
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div> <!-- course terms -->
+                        
+                        <div class="corses-singel-image pt-50">
+                            <iframe class="ml-60" width="560" height="315" src="https://www.youtube.com/embed/{{course.LinkVideo}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div> <!-- corses singel image -->
+                        
+                        <div class="corses-tab mt-30">
+                            <ul class="nav nav-justified" id="myTab" role="tablist">
+                                <li class="nav-item mt-50">
+                                    <h3>Mô tả khóa học</h3>
+                                </li>
+                            </ul>
+                            
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
+                                    <div class="overview-description">
+                                        <div class="singel-description pt-40">
+                                            <p>{{course.MoTa}}</p>
+                                        </div>
+                                    </div> <!-- overview description -->
+                                </div>
+                            </div> <!-- tab content -->
+                        </div>
+                    </div> <!-- corses singel left -->
+                    
+                </div>
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-6">
+                            <div class="course-features mt-30">
+                               <h4>Lộ trình học</h4>
+                                <ul>
+                                    <li><i class="fa fa-clock-o"></i>Ngày bắt đầu : <span>{{course.NgayBD}}</span></li>
+                                    <li><i class="fa fa-clock-o"></i>Ngày kết thúc : <span>{{course.NgayKT}}</span></li>
+                                    <li><i class="fa fa-clock-o"></i>Lịch học : <span>{{course.LichHoc}}</span></li>
+                                </ul>
+                                <div class="price-button pt-10">
+                                    <span>Học phí đã đóng: <b>{{course.HocPhi}} VNĐ</b></span>
+                                </div>
+                            </div> <!-- course features -->
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- row -->
+
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    
+    <!--====== COURSES SINGEl PART ENDS ======-->
+   
+   
+    <!--====== BACK TO TP PART START ======-->
+    
+    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+    
+    <!--====== BACK TO TP PART ENDS ======-->
+
+
+</body>

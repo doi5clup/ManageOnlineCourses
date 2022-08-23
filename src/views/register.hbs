@@ -1,0 +1,183 @@
+<header id="header-part">
+        <div class="navigation navigation-2 navigation-3">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-lg-11 col-md-10 col-sm-9 col-9">
+                    <nav class="navbar navbar-expand-lg">
+                            
+                        <a class="navbar-brand" style="margin-right: 60px;" href="/home">
+                            <h1 style="font-size: 30px; color: rgb(0, 225, 255)"><i class="fa fa-graduation-cap active"> COURSIN </i></h1>         
+                        </a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                            <div class="ml-auto">
+								<a href="/login" style="color: white; font-size: 14px; font-weight: 700">Đăng nhập</a>
+							</div>
+						</div>
+                        
+                    </nav> <!-- nav -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </div>  
+</header>
+
+<!--====== PAGE BANNER PART START ======-->
+    
+<section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style="background-image: url(/images/page-banner-2.jpg)">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mt-10">
+                <div class="page-banner-cont">
+                    <h2 style="font-size: 30px">Hãy là thành viên của COURSIN chúng tôi !!</h2>
+                </div>  <!-- page banner cont -->
+            </div>
+    </div> <!-- container -->
+</section>
+
+<!--====== PAGE BANNER PART ENDS ======-->
+
+<div class="row justify-content-center mt-20">
+    <div class="d-flex justify-content-center">
+      <div class="card" style="width:40rem;padding:10px">
+        {{#if isEmpty}}
+            <h3 class="mb-20" style="font-size: 18px; color: red">Bạn hãy điền đầy đủ thông tin trước khi đăng ký !</h3>
+        {{/if}}
+
+        {{#if isExistsUsername}}
+            <h3 class="mb-20" style="font-size: 18px; color: red">Tên đăng nhập đã tồn tại !</h3>
+        {{/if}}
+
+        {{#if notEqualsPass}}
+            <h3 class="mb-20" style="font-size: 18px; color: red">Mật khẩu nhập lại không khớp !</h3>
+        {{/if}}
+        
+        <ul class="list-group list-group-flush">
+          <form action="/register" method="post">
+            <li class="list-group-item">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Họ và tên</span>
+                    </div>
+                    <input name="HoTen" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" />
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Ngày sinh</span>
+                    </div>
+                    <input name="NgaySinh" type="date" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+                
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Giới tính</label>
+                    </div>
+                    <select class="custom-select" name="GioiTinh" id="inputGroupSelect01">
+                        <option value="NAM">Nam</option>
+                        <option value="NU">Nữ</option>
+                    </select>
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Số điện thoại</span>
+                    </div>
+                    <input name="SoDienThoai" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" />
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+                    </div>
+                    <input name="Email" type="email" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" />
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Địa chỉ</span>
+                    </div>
+                    <input name="DiaChi" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" />
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Tên đăng nhập</span>
+                    </div>
+                    <input name="UserName" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" />
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Loại người dùng</label>
+                    </div>
+                    <select class="custom-select" name="LoaiNguoiDung" id="inputGroupSelect01">
+                        <option value="GiaoVien">GiaoVien</option>
+                        <option value="HocVien">HocVien</option>
+                        <option value="Admin">Admin</option>
+                    </select>
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Mật khẩu</span>
+                    </div>
+                    <input name="Pass" type="password" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" />
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Nhập lại mật khẩu</span>
+                    </div>
+                    <input name="RePass" type="password" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" />
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Ngân hàng liên kết</label>
+                    </div>
+                    <select class="custom-select" name="NganHangLK" id="inputGroupSelect01">
+                        <option>ACB</option>
+                        <option>BIDV</option>
+                        <option>VietinBank</option>
+                        <option>Vietcombank</option>
+                        <option>Techcombank</option>
+                        <option>Agribank</option>
+                        <option>MB Bank</option>
+                        <option>BIDV</option>
+                        <option>VietinBank</option>
+                    </select>
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Số TK ngân hàng liên kết</span>
+                    </div>
+                    <input name="SoTK" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" />
+                </div>
+
+                <div class="d-flex justify-content-center align-items-end text-center">
+                    <button type="submit"
+                        style="background-color:#44c767;
+                            border-radius:28px;
+                            border:1px solid #18ab29;
+                            display:inline-block;
+                            cursor:pointer;color:#ffffff;font-family:Arial;font-size:17px;padding-left:20px;padding-right:20px;padding-top:10px;padding-bottom:10px;text-decoration:none;;">Đăng ký
+                    </button>
+              </div>
+            </li>
+          </form>
+
+        </ul>
+      </div>
+    </div>
+  </div>

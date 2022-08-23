@@ -1,0 +1,279 @@
+<!--====== HEADER PART START ======-->
+    
+<header id="header-part">        
+    <div class="navigation navigation-2 navigation-3">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-lg-11 col-md-10 col-sm-9 col-9">
+                    <nav class="navbar navbar-expand-lg">
+                            
+                        <a class="navbar-brand" style="margin-right: 60px;" href="index-4.html">
+                            <h1 style="font-size: 30px; color: rgb(0, 225, 255)"><i class="fa fa-graduation-cap active"> COURSIN </i></h1>         
+                        </a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item">
+                                    <a href="" style="font-size: 17px;">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" style="font-size: 17px;">Tất cả</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" style="font-size: 17px;">Học sinh - Sinh viên</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" style="font-size: 17px;">Người đi làm</a>
+                                </li>
+                            </ul>   
+
+                            {{#if session.isLogin}}
+                                
+                                <div class="ml-auto">
+                                    <div class="navbar-brand dropdown ml-40">
+                                        <a class="dropdown-toggle" style="color: white; font-size: 17px; font-weight: 700" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            {{session.name}}
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            {{#if session.isTeacher}}
+                                                <li><a class="dropdown-item" href="/teacher">Khóa học của tôi</a></li>
+                                            {{else}}
+                                                <li><a class="dropdown-item" href="/student">Khóa học của tôi</a></li>
+                                            {{/if}}
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><a class="dropdown-item" href="#">Cập nhật thông tin</a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><a class="dropdown-item" href="/">Đăng xuất</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                        
+                                    
+                            {{else}}
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item"><a href="/register" style="font-size: 12px;">Đăng kí</a></li>
+                                    <li class="nav-item"><a href="/login" style="font-size: 12px;">Đăng nhập</a></li>
+                                </ul>   
+                            {{/if}}
+                        </div>
+                    </nav> <!-- nav -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </div>  
+</header>
+
+<!--====== HEADER PART ENDS ======-->
+
+    <!--====== SEARCH BOX PART START ======-->
+
+    <div class="search-box">
+        <div class="serach-form">
+            <div class="closebtn">
+                <span></span>
+                <span></span>
+            </div>
+            <form action="#">
+                <input type="text" placeholder="Search by keyword">
+                <button><i class="fa fa-search"></i></button>
+            </form>
+        </div> <!-- serach form -->
+    </div>
+
+    <!--====== SEARCH BOX PART ENDS ======-->
+
+    <!--====== SLIDER PART START ======-->
+
+    <section id="slider-part-3" class="bg_cover"  style="background-image: url(/images/slider/s-4.jpg)">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="slider-cont-3 text-center">
+                        <h2>Tìm kiếm khóa học theo cách của bạn !!</h2>
+                        <div class="slider-search mt-45">
+                            <form action="" method="post">
+                                <div class="row no-gutters">
+                                    
+                                    <div class="col-sm-9">
+                                        <input type="text" name = "keySearch" placeholder="Nhập từ khóa">
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <button type="submit" class="main-btn">Tìm kiếm</button>
+                                    </div>
+                                </div> <!-- row -->
+                            </form>
+                        </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+
+    <!--====== CATEGORY PART START ======-->
+    
+    <section id="category-3" class="category-2-items pt-50 pb-80 gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="singel-items text-center mt-30">
+                        <div class="items-image">
+                            <img src="/images/category/ctg-1.jpg" alt="Category">
+                        </div>
+                        <div class="items-cont">
+                            <a href="#">
+                                <h5>Tiếng anh</h5>
+                            </a>
+                        </div>
+                    </div> <!-- singel items -->
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="singel-items text-center mt-30">
+                        <div class="items-image">
+                            <img src="/images/category/ctg-1.jpg" alt="Category">
+                        </div>
+                        <div class="items-cont">
+                            <a href="#">
+                                <h5>IT</h5>
+                            </a>
+                        </div>
+                    </div> <!-- singel items -->
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="singel-items text-center mt-30">
+                        <div class="items-image">
+                            <img src="/images/category/ctg-1.jpg" alt="Category">
+                        </div>
+                        <div class="items-cont">
+                            <a href="#">
+                                <h5>Khoa học tự nhiên</h5>
+                            </a>
+                        </div>
+                    </div> <!-- singel items -->
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="singel-items text-center mt-30">
+                        <div class="items-image">
+                            <img src="/images/category/ctg-1.jpg" alt="Category">
+                        </div>
+                        <div class="items-cont">
+                            <a href="#">
+                                <h5>Khoa học xã hội</h5>
+                            </a>
+                        </div>
+                    </div> <!-- singel items -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== CATEGORY PART ENDS ======-->
+    
+    <!--====== COURSE PART START ======-->
+    
+    <section id="course-part" class="pt-115 pb-115">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title pb-45">
+                        <h5>Khóa học của chúng tôi</h5>
+                        <br>
+                        <h2>Đang mở</h2>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row course-slied mt-30">
+                {{#each khoahoc_opening}}
+                    <div class="col-lg-4">
+                        <div class="singel-course-2">
+                            <div class="thum">
+                                <div class="image">
+                                    <a href="/course/{{this.Slug}}">
+                                        <img style="width: 369px; height: 251px;" src="{{this.LinkImage}}" alt="Course">
+                                    </a>
+                                </div>
+                                
+                                <div class="course-teacher">
+                                    <div class="thum">
+                                        <a href="courses-singel.html"><img style="width: 30px; height: 40px;" src="{{this.LinkAvatar}}" alt="teacher"></a>
+                                    </div>
+                                    <div class="name">
+                                        <a href="/course/{{this.Slug}}"><h6>{{this.HoTen}}</h6></a>
+                                    </div>
+                                    <div class="review">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cont">
+                                <a href="/course/{{this.Slug}}"><h4>{{this.TenKH}}</h4></a>
+                            </div>
+                        </div> <!-- singel course -->
+                    </div>
+                {{/each}}
+            </div> <!-- course slied -->
+        </div> <!-- container -->
+    </section>
+    
+    <!--====== COURSE PART ENDS ======-->
+
+    <section id="course-part" >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title pb-45">
+                        <h2>Sắp mở</h2>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row course-slied mt-30">
+                {{#each khoahoc_opensoon}}
+                    <div class="col-lg-4">
+                        <div class="singel-course-2">
+                            <div class="thum">
+                                <div class="image">
+                                    <a href="/course/{{this.Slug}}">
+                                        <img style="width: 369px; height: 251px;" src="{{this.LinkImage}}" alt="Course">
+                                    </a>
+                                </div>
+                                
+                                <div class="course-teacher">
+                                    <div class="thum">
+                                        <a href="courses-singel.html"><img style="width: 30px; height: 40px;" src="{{this.LinkAvatar}}" alt="teacher"></a>
+                                    </div>
+                                    <div class="name">
+                                        <a href="/course/{{this.Slug}}"><h6>{{this.HoTen}}</h6></a>
+                                    </div>
+                                    <div class="review">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cont">
+                                <a href="/course/{{this.Slug}}"><h4>{{this.TenKH}}</h4></a>
+                            </div>
+                        </div> <!-- singel course -->
+                    </div>
+                {{/each}}
+            </div> <!-- course slied -->
+        </div> <!-- container -->
+    </section>
+    
+    <!--====== COURSE PART ENDS ======-->

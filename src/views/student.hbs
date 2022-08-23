@@ -1,0 +1,172 @@
+<header id="header-part">
+        <div class="navigation navigation-2 navigation-3">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-lg-11 col-md-10 col-sm-9 col-9">
+                    <nav class="navbar navbar-expand-lg">
+                            
+                        <a class="navbar-brand" style="margin-right: 60px;" href="/home">
+                            <h1 style="font-size: 30px; color: rgb(0, 225, 255)"><i class="fa fa-graduation-cap active"> COURSIN </i></h1>         
+                        </a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                           
+                            <div class="ml-auto">
+                                <div class="navbar-brand dropdown ml-40">
+                                    <a class="dropdown-toggle" style="color: white; font-size: 17px; font-weight: 700" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        {{session.name}}
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">Cập nhật thông tin</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="/">Đăng xuất</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </nav> <!-- nav -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </div>  
+</header>
+
+<!--====== PAGE BANNER PART START ======-->
+    
+    <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style="background-image: url(/images/page-banner-2.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 mt-60">
+                    <div class="page-banner-cont">
+                        <h2>Khóa học của tôi</h2>
+                    </div>  <!-- page banner cont -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    
+    <!--====== PAGE BANNER PART ENDS ======-->
+
+    <!--====== COURSE PART START ======-->
+    
+    <section id="course-part" class="pt-115 pb-115">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title pb-45">
+                        <h5>Khóa học của chúng tôi</h5>
+                        <br>
+                        <h2>Chưa hoàn thành</h2>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            {{#if len_khoahoc_opening}}
+                <div class="row course-slied mt-30">
+            {{else}}
+                <div class="row mt-30">
+            {{/if}}
+                {{#each khoahoc_opening}}
+                    <div class="col-lg-4">
+                        <div class="singel-course-2">
+                            <div class="thum">
+                                <div class="image">
+                                    <a href="/student/course/{{this.Slug}}">
+                                        <img style="width: 369px; height: 251px;" src="{{this.LinkImage}}" alt="Course">
+                                    </a>
+                                </div>
+                                
+                                <div class="course-teacher">
+                                    <div class="thum">
+                                        <a href="courses-singel.html"><img style="width: 30px; height: 40px;" src="{{this.LinkAvatar}}" alt="teacher"></a>
+                                    </div>
+
+                                    <div class="name">
+                                        <a href="/student/course/{{this.Slug}}"><h6>{{this.HoTen}}</h6></a>
+                                    </div>
+                                    
+                                    <div class="review">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cont">
+                                <a href="/student/course/{{this.Slug}}"><h4>{{this.TenKH}}</h4></a>
+                            </div>
+                        </div> <!-- singel course -->
+                    </div>
+                {{/each}}
+            </div> <!-- course slied -->
+        </div> <!-- container -->
+    </section>
+    
+    <!--====== COURSE PART ENDS ======-->
+
+    <section id="course-part" >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title pb-45">
+                        <h2>Đã hoàn thành</h2>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            {{#if len_khoahoc_opensoon}}
+                <div class="row course-slied mt-30">
+            {{else}}
+                <div class="row mt-30">
+            {{/if}}
+                {{#each khoahoc_opensoon}}
+                    <div class="col-lg-4">
+                        <div class="singel-course-2">
+                            <div class="thum">
+                                <div class="image">
+                                    <a href="/student/course/{{this.Slug}}">
+                                        <img style="width: 369px; height: 251px;" src="{{this.LinkImage}}" alt="Course">
+                                    </a>
+                                </div>
+                                
+                                <div class="course-teacher">
+                                    <div class="thum">
+                                        <a href="courses-singel.html"><img style="width: 30px; height: 40px;" src="{{this.LinkAvatar}}" alt="teacher"></a>
+                                    </div>
+
+                                    <div class="name">
+                                        <a href="/student/course/{{this.Slug}}"><h6>{{this.HoTen}}</h6></a>
+                                    </div>
+                                    
+                                    <div class="review">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cont">
+                                <a href="/student/course/{{this.Slug}}"><h4>{{this.TenKH}}</h4></a>
+                            </div>
+                        </div> <!-- singel course -->
+                    </div>
+                {{/each}}
+            </div> <!-- course slied -->
+        </div> <!-- container -->
+    </section>
+    
+    <!--====== COURSE PART ENDS ======-->

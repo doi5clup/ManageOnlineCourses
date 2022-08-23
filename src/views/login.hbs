@@ -1,0 +1,62 @@
+<!--====== HEADER PART START ======-->
+    
+<header id="header-part">        
+    <div class="navigation navigation-2 navigation-3">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-lg-11 col-md-10 col-sm-9 col-9">
+                    <nav class="navbar navbar-expand-lg">
+                            
+                        <a class="navbar-brand" style="margin-right: 60px;" href="/home">
+                            <h1 style="font-size: 30px; color: rgb(0, 225, 255)"><i class="fa fa-graduation-cap active"> COURSIN </i></h1>         
+                        </a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+						<div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                            <div class="ml-auto">
+								<a href="/register" style="color: white; font-size: 14px; font-weight: 700">Đăng kí</a>
+							</div>
+						</div>
+						
+                    </nav> <!-- nav -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </div>  
+</header>
+
+<section id="slider-part-3" class="bg_cover"  style="background-image: url(/images/slider/s-6.jpg)">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-10">
+				<div class="slider-cont-3 text-center">
+					<h3 style="color: white; font-size: 30px; font-weight: 700">Đăng nhập để trải nghiêm tốt nhất !!</h3>
+					<div class="mt-45">
+						<form method="post" action="">
+							<div class="col no-gutters">
+								<input style="height: 40px" type="text" name = "username" placeholder="Tên đăng nhập">
+							</div>
+
+							<div class="col no-gutters mt-20">
+								<input style="height: 40px" type="password" name = "password" placeholder="Mật khẩu">
+							</div>
+
+							<div class="col no-gutters mt-20">
+								<button type="submit" class="main-btn">Đăng nhập</button>
+							</div>
+
+							{{#if error}}
+								<h3 class="mt-20" style="font-size: 15px; color: red">Tên đăng nhập hoặc mật khẩu không đúng !</h3>
+							{{/if}}
+						</form>
+					</div>
+				</div>
+			</div>
+		</div> <!-- row -->
+	</div> <!-- container -->
+</section>
